@@ -11,13 +11,7 @@ makeRows = (rows, columns) => {
     for(let i=0; i<rows*columns; i++) {
         const gridCell = document.createElement('div')
         gridCell.classList.add('gridCell')
-        gridCell.addEventListener('mousedown', e => {
-            changeColor(e)
-            if(e.buttons == 1) {
-                grid.addEventListener('mouseover', changeColor)           
-            }  
-        })
-        
+        gridCell.addEventListener('mouseover', changeColor)        
         grid.appendChild(gridCell)
     }
 }
